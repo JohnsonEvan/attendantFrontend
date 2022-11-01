@@ -11,7 +11,7 @@ function Add() {
     function handleSubmit(e) {
       let token = "Bearer " + localStorage.getItem("jwt");
 
-      fetch("http://127.0.0.1:3001/add",{
+      fetch("/add",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
