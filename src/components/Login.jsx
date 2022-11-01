@@ -17,7 +17,7 @@ class Login extends Component {
     const request = {"auth": {"email": email, "password": password}};
     console.log(request);
     axios 
-    .post('/api/user_token', request)
+    .post('https://attendanttrackerapi.herokuapp.com/api/user_token', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
         this.props.history.push("/");

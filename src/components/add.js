@@ -11,7 +11,7 @@ function Add() {
     function handleSubmit(e) {
       let token = "Bearer " + localStorage.getItem("jwt");
 
-      fetch("/add",{
+      fetch("https://attendanttrackerapi.herokuapp.com/add",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",

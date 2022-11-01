@@ -22,8 +22,6 @@
     "eject": "react-scripts eject"
   },
 
-  "proxy": "https://attendanttrackerapi.herokuapp.com",
-  
   "eslintConfig": {
     "extends": [
       "react-app",
