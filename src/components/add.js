@@ -31,17 +31,13 @@ function Add() {
     return (
         
         <Form id="newperson" onSubmit={handleSubmit}>
-            <Form.Group className="m-3 text-center" controlId="formBasicEmail">
+            <Form.Group className="m-4 text-center" controlId="formBasicEmail">
             <Form.Label>Add new attendant:</Form.Label>
-            <Form.Control className='m-3' type="text" value={fname} placeholder="name" onChange={(e) => setFname(e.target.value)} />
+            <Form.Control  className="m-2" type="text" value={fname} placeholder="first name" onChange={(e) => setFname(e.target.value)} />
+            <Form.Control  className="m-2" type="text" value={lname} placeholder="last name" onChange={(e) => setLname(e.target.value)} />
+            <Form.Control  className="m-2" type="email" value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+            <Button  variant="primary" type="submit">Submit</Button>
             </Form.Group>
-            <Form.Control className='m-3' type="text" value={lname} placeholder="name" onChange={(e) => setLname(e.target.value)} />
-            <Form.Group className="m-3" >
-            <Form.Control className="m-3"  type="email" value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
-            </Form.Group>
-            <Button className='m-3' variant="primary" type="submit">
-            Submit
-            </Button>
             </Form>
 
     );

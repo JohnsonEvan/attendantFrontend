@@ -17,8 +17,7 @@ export default function Display() {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({method: 'get', url: 'https://attendanttrackerapi.herokuapp.com/attendants', headers: {'Authorization': token }})
       .then(response => { 
-        console.log(response)
-        setAttendants( response.data )
+        setAttendants(response.data)
       })
       .catch(error => console.log('error', error));
   },[])
@@ -34,7 +33,7 @@ const filterAttendants = attendants.filter((attendants)=>{
  })
 
 return(
-    <Container className="m-5">
+    <Container >
         <Srcbar handleSearch={handleSearch} />
         <Attendants attendants={filterAttendants} />
         <Add />

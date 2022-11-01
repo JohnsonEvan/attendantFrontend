@@ -11,11 +11,13 @@ class Login extends Component {
   }
   
   handleSubmit (event) {
+
     event.preventDefault();
+
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const request = {"auth": {"email": email, "password": password}};
-    console.log(request);
+
     axios 
     .post('https://attendanttrackerapi.herokuapp.com/api/user_token', request)
       .then(response => {
@@ -34,9 +36,6 @@ class Login extends Component {
       <Form.Group className="mb-3" >
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" id="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3">
