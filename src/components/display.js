@@ -14,8 +14,7 @@ export default function Display() {
 
 
   useEffect(()=>{
-    let token = "Bearer " + localStorage.getItem("jwt");
-    axios({method: 'get', url: 'https://attendanttrackerapi.herokuapp.com/attendants', headers: {'Authorization': token }})
+    axios({method: 'get', url: 'https://attendanttrackerapi.herokuapp.com/attendants'})
       .then(response => { 
         setAttendants(response.data)
       })

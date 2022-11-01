@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import Login from './Login';
-import Logout from './Logout';
+// import Login from './Login';
+// import Logout from './Logout';
 import { Route, Routes, BrowserRouter} from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -15,8 +15,8 @@ class App extends Component {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/logout" element={<Logout />} />
+          {/* <Route exact path="/login" element={<Login />} />
+          <Route exact path="/logout" element={<Logout />} /> */}
           <Route exact path="/display" element={<Display />} />
         </Routes>
     </BrowserRouter>
@@ -33,12 +33,12 @@ const Navigation = () => (
     <Nav className="me-auto">
     <Nav.Link exact className="nav-link" ClassName="active" href="/">Home</Nav.Link>
     <Nav.Link exact className="nav-link" ClassName="active" href="/display">Attendants</Nav.Link>
-    {
+    {/* {
         localStorage.getItem("jwt") ?
           <Nav.Link exact className="nav-link" href="/logout">Log Out</Nav.Link>
         :
           <Nav.Link exact className="nav-link" ClassName="active" href="/login">Log In</Nav.Link>
-      }
+      } */}
     </Nav>
     </Navbar.Collapse>
     </Container>
