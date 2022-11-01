@@ -15,7 +15,7 @@ export default function Display() {
 
   useEffect(()=>{
     let token = "Bearer " + localStorage.getItem("jwt");
-    axios({method: 'get', url: 'http://127.0.0.1:3001/attendants', headers: {'Authorization': token }})
+    axios({method: 'get', url: 'http://0.0.0.0:25615/attendants', headers: {'Authorization': token }})
       .then(response => { 
         console.log(response)
         setAttendants( response.data )
