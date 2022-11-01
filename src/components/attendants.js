@@ -7,14 +7,16 @@ export default function Attendants(props){
             <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Email</th>
                 </tr>
             </thead>
             <tbody>
                 {props.attendants.map((attendant) => {
                 return <tr key={attendant.id}>
-                    <th>{attendant.name}</th>
+                    <th>{attendant.fname}</th>
+                    <th>{attendant.lname}</th>
                     <th>{attendant.email}</th>
                     </tr>
                 })}

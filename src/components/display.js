@@ -30,7 +30,7 @@ function handleSearch(searchText){
 
 const filterAttendants = attendants.filter((attendants)=>{
   const upperSearchText = searchText.toUpperCase();
-  return attendants.name.toUpperCase().includes(upperSearchText);
+  return attendants.fname.toUpperCase().includes(upperSearchText) || attendants.lname.toUpperCase().includes(upperSearchText);
  })
 
 return(
