@@ -17,7 +17,7 @@ class Login extends Component {
     const request = {"auth": {"email": email, "password": password}};
     console.log(request);
     axios 
-    .post('http://0.0.0.0:25615/api/user_token', request)
+    .post('http://127.0.0.1:3001/api/user_token', request)
       .then(response => {
         localStorage.setItem("jwt", response.data.jwt);
         this.props.history.push("/");
