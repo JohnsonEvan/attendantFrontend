@@ -11,6 +11,7 @@ export default function Attendants(props){
         result = result.json();
         console.warn(result)
     }
+
     
     return(
 
